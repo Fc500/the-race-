@@ -1,0 +1,28 @@
+gamescene = import gamescene
+
+// variables
+let player = 2g
+
+let enemy1 = 3g
+
+let enemy2 = 4g
+
+let enemy3 = 5g
+
+
+
+let random_movements = counter(0)
+let toggle_movement = counter(0)
+
+on(gamescene.button_a(), !{
+    random_movements += 1
+
+    if random_movements == 4 {
+        random_movements -= 4
+    }
+        
+})
+
+on(collision(3b, 4b), !{
+    BG.set(255,0,0)
+})
